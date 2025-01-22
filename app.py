@@ -2,9 +2,11 @@ from flask import Flask, jsonify, request
 import requests
 import os
 import urllib.parse
+from flask_cors import CORS
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)  # Enables CORS for all routes
 
 # Function to fetch a new access token
 def fetch_token():
